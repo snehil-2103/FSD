@@ -1,0 +1,295 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* 2. Reusable Utility Classes */
+.btn {
+    background-color: #e50914; /* Netflix Red */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #f40612;
+}
+
+.btn-red-sm {
+    padding: 7px 17px;
+    font-size: 0.9rem;
+}
+
+.btn-red-lg {
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    border-radius: 0 4px 4px 0; /* Rounded only on right side for input combo */
+}
+
+/* Grey separator line between sections */
+.divider {
+    height: 8px;
+    background-color: #232323;
+    border-top: 1px solid #000;
+}
+
+/* 3. Header Styling */
+.header {
+    height: 100vh; /* Full screen height */
+    width: 100%;
+    /* Background image with a dark gradient overlay so text pops */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://assets.nflxext.com/ffe/siteui/vlv3/f85718e-b5cc-4395-b223-245399621231/ad11796a-6a9d-4897-8a5f-98e725d7684e/US-en-20230206-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* Centering the Hero Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80%; /* Takes up rest of header */
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    max-width: 640px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.email-signup input {
+    padding: 15px;
+    width: 400px;
+    font-size: 1rem;
+    border: 1px solid #8c8c8c;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+/* 4. Feature Sections */
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 45px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-text {
+    flex: 1; /* Takes up half space */
+    padding-right: 20px;
+}
+
+.feature-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-text p {
+    font-size: 1.5rem;
+}
+
+.feature-img {
+    flex: 1; /* Takes up half space */
+    position: relative;
+    text-align: center;
+}
+
+.feature-img img {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+/* CSS trick to flip the row for the 2nd feature */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* 5. FAQ Section (Accordion) */
+.faq {
+    padding: 70px 45px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    list-style: none;
+    width: 100%;
+}
+
+.accordion li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Styling the Summary (The visible bar) */
+details summary {
+    background-color: #303030;
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    list-style: none; /* Hides default triangle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details summary:hover {
+    background-color: #4e4e4e;
+}
+
+/* Creating the '+' sign with pure CSS */
+details summary::after {
+    content: '+';
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+/* When open, change '+' to 'x' (visually rotating) */
+details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+/* Styling the hidden content */
+details .content {
+    background-color: #303030;
+    padding: 20px;
+    margin-top: 1px; /* Tiny gap */
+    border-top: 1px solid black;
+    font-size: 1.5rem;
+}
+
+.email-signup-footer {
+    margin-top: 50px;
+}
+
+/* 6. Footer */
+footer {
+    padding: 70px 45px;
+    color: #737373;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px;
+}
+
+.footer-cols ul {
+    list-style: none;
+}
+
+.footer-cols ul li {
+    margin-bottom: 10px;
+}
+
+.footer-cols a {
+    color: #737373;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-cols a:hover {
+    text-decoration: underline;
+}
+
+/* 7. Mobile Responsiveness */
+@media (max-width: 960px) {
+    .feature {
+        flex-direction: column; /* Stack text on top of image */
+        text-align: center;
+    }
+    
+    .reverse {
+        flex-direction: column; /* Keep text on top */
+    }
+
+    .feature-text {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .email-signup {
+        flex-direction: column; /* Stack input and button */
+        gap: 10px;
+    }
+
+    .email-signup input {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .btn-red-lg {
+        width: 100%;
+        border-radius: 4px;
+        font-size: 1.2rem;
+    }
+    
+    .footer-cols {
+        grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+    }
+}

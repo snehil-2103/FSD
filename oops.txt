@@ -1,0 +1,32 @@
+OOps in c++ is introduced to solve the problem by organizing code into classes and object making program easier to understand we use & maintain 
+
+Key features in C++
+Structures code into logicak unit(Classes and OBJ)
+Keeps releted data and method together(encapsulation)
+Makes code Moduar ,reuseable & scaleable
+Prevent Unauthorised access to data
+
+CHARECTERISTICS OF OOPS
+1 Class
+2 Obj
+3 Incabulation
+4 Extraction 
+5 INtrance
+6 POlymolters
+
+Classs -is a Prototype or blue print from which Obj are created ,Its the set of Data members or Methods That are to all OBJ
+OBJ -IT is an Basic unit of oops THAT represent An object,state ,meber function ,Bheviour and identity
+Abstraction- TIt is the process hiding of Implementation Details Only showing the Assential details and features to the user
+Incapsullation- It is a process of Rarring data and Method into a single unit 
+It can be achived by all the variables in a class as a private & publc mtd
+In the Class set And the values of Variables
+Interance- It is an important pillar of oops where 1 class is allow to inheritate features (Data members,Member Function) of a class
+We achieve Inheritance by Using the access specifier (pub,pvt ,protected)And is also known as Asd relationship 
+
+Imp term of inheritance
+Superclass
+subclass
+re-usability
+
+Polymoltrs- It means many forms 
+It allows the same mtd to behave diffrently
